@@ -14,9 +14,9 @@ const app = express();
 
 app.use(
   helmet({
-    frameguard: { action: "deny" },
-    dnsPrefetchControl: { allow: true },
-    referrerPolicy: { policy: ["origin", "unsafe-url"] },
+    frameguard: { action: "sameorigin" },
+    dnsPrefetchControl: { allow: false },
+    referrerPolicy: { policy: ["same-origin"] },
   })
 );
 
